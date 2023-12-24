@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PunchLine Jokes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="laughing.png" type="image/x-icon" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500,300,600,401,400&f[]=satoshi@900,700,500,400&f[]=clash-display@400,500,300&f[]=stardom@400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "General Sans", sans-serif;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ebd4cb;
+      }
+      h1 {
+        margin-top: 50px;
+        font-size: 1.5rem;
+        color: #b6465f;
+      }
+      p {
+        color: #b6465f;
+        font-weight: 900;
+      }
+      span {
+        color: black;
+        font-weight: 300;
+      }
+      .container {
+        margin-top: 50px;
+        border: 1px solid #b6465f;
+        width: 400px;
+        height: 200px;
+        padding: 20px;
+      }
+      .type {
+        top: 100px;
+        position: absolute;
+        margin-left: -290px;
+        text-align: left;
+        font-style: italic;
+      }
+      .punch {
+        margin-top: 20px;
+      }
+      button {
+        width: 150px;
+        height: 30px;
+        background-color: #b6465f;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: white;
+        margin-top: 10px;
+      }
+      button:active {
+        border: 1px solid #b6465f;
+        background-color: transparent;
+        color: #b6465f;
+        transition: all 0.3s linear;
+      }
+      .load {
+        margin-top: 50px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to the Punchline Jokes</h1>
+
+    <p class="type">Type: <span id="type">basic</span></p>
+    <div class="container">
+      <div class="line">
+        <p>Joke: <span id="line">jokes will be displayed here</span></p>
+      </div>
+      <div class="punch">
+        <p>
+          Punchline: <span id="punch">punchline will be displayed here</span>
+        </p>
+        <div class="load">Jokes loading...</div>
+      </div>
+    </div>
+    <button>New joke</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
